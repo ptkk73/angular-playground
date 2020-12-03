@@ -12,6 +12,7 @@ import { CartService } from "./cart.service";
 import { CartComponent } from "./cart/cart.component";
 
 import { HttpClientModule } from "@angular/common/http";
+import { ShippingComponentComponent } from './shipping-component/shipping-component.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from "@angular/common/http";
     RouterModule.forRoot([
       { path: "", component: ProductListComponent },
       { path: "products/:productId", component: ProductDetailsComponent },
-      { path: "cart", component: CartComponent }
+      { path: "cart", component: CartComponent },
+      { path: "shipping", component: ShippingComponentComponent}
     ])
   ],
   declarations: [
@@ -30,7 +32,8 @@ import { HttpClientModule } from "@angular/common/http";
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
-    CartComponent
+    CartComponent,
+    ShippingComponentComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartService]
